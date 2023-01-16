@@ -36,12 +36,12 @@
                                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                             </div>
                                             <div class="form-group">
-                                                <label>Password default : <small>password123</small></label>
-                                                <input class="form-control" id="password1" name="password1" type="password" value="password123" readonly>
+                                                <label>Password<small class="text-danger mb-3">*Minimal 8 character</small></label>
+                                                <input class="form-control" id="password1" name="password1" type="password">
                                             </div>
                                             <div class="form-group">
-                                                <label>Konfirmasi password default : <small>password123</small></label>
-                                                <input class="form-control" id="password2" name="password2" type="password" value="password123" readonly>
+                                                <label>Konfirmasi password</label>
+                                                <input class="form-control" id="password2" name="password2" type="password">
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat<small>(optional)</small></label>

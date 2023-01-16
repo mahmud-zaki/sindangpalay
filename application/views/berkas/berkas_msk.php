@@ -26,7 +26,7 @@
             </div>
             <section id="main-content">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-xl-12">
                         <div class="card">
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive">
@@ -34,25 +34,36 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama menu</th>
-                                                <th>Icon</th>
+                                                <th>ID Berkas</th>
+                                                <th>Nama berkas</th>
+                                                <th>Nama pengurus</th>
+                                                <th>Alamat</th>
+                                                <th>No. Telepon</th>
+                                                <th>Berkas</th>
+                                                <th>Tanggal berkas dibuat</th>
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $i = 1; ?>
-                                            <!-- <?php foreach ($menu as $m) : ?> -->
-                                            <tr>
-                                                <td><?= $i; ?></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td align="start">
-                                                    <!-- <a href="<?= base_url('menu/edit_menu/') . $m['id']; ?>" class="badge badge-success">edit</a>
-                                                        <a href="<?= base_url('menu/hapus_menu/') . $m['id']; ?>" class="badge badge-danger">delete</a> -->
-                                                </td>
-                                            </tr>
-                                            <?php $i++; ?>
-                                            <!-- <?php endforeach; ?> -->
+                                            <?php foreach ($berkas as $b) : ?>
+                                                <tr>
+                                                    <td><?= $i; ?></td>
+                                                    <td><?= $b['id_berkas']; ?></td>
+                                                    <td><?= $b['nama_berkas']; ?></td>
+                                                    <td><?= $b['nama']; ?></td>
+                                                    <td><?= $b['alamat']; ?></td>
+                                                    <td><?= $b['no_tlp']; ?></td>
+                                                    <td><?= $b['berkas']; ?></td>
+                                                    <td><?= $b['tggl_brks']; ?></td>
+
+                                                    <td align="start">
+                                                        <a href="<?= base_url('menu/edit_menu/') . $b['id']; ?>" class="badge badge-success">edit</a>
+                                                        <a href="<?= base_url('menu/hapus_menu/') . $b['id']; ?>" class="badge badge-danger">delete</a>
+                                                    </td>
+                                                </tr>
+                                                <?php $i++; ?>
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
