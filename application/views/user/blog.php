@@ -6,7 +6,7 @@
         </div>
         <div class="row">
             <?php foreach ($post as $po) : ?>
-                <div class="col-md-1 col-lg-3 item mt-5 post">
+                <div class="col-md-4 col-lg-3 item mt-5 post">
                     <div class="lightbox card cards shadow">
                         <img src="<?= base_url('assets/img/postingan/') . $po['gambar']; ?>" class="img-fluid img-thumbnail" alt="<?= $po['judul']; ?>" style="height: 15rem;">
                         <div class="card-body ">
@@ -24,7 +24,7 @@
 <!-- end page -->
 
 <script>
-    let noOfCharac = 150;
+    let noOfCharac = 90;
     let contents = document.querySelectorAll(".content");
     contents.forEach(content => {
         //If text length is less that noOfCharac... then hide the read more button
