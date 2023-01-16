@@ -11,7 +11,7 @@
                         <img src="<?= base_url('assets/img/postingan/') . $po['gambar']; ?>" class="img-fluid img-thumbnail" alt="<?= $po['judul']; ?>" style="height: 15rem;">
                         <div class="card-body ">
                             <h6 class="card-title text-uppercase"><?= $po['judul']; ?></h6>
-                            <p class="content"><?= $po['deskripsi']; ?> ... </p>
+                            <p class="content"><?= $po['deskripsi']; ?></p>
                             <button onclick="readMore(this)">Read More</button>
                             <small class="card-text float-left text-muted"><?= format_indo(date($po['tggl_post']), "Y-m"); ?></small>
                         </div>
