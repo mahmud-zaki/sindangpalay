@@ -39,15 +39,3 @@
 </div>
 
 
-<div class="col-md-5 mx-auto shadow p-3 mb-5 bg-body profile" style="margin-top:-8em;">
-    <div class="text-center profile-card-3">
-        <div class="profile-thumb-block">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Wali_Kota_Manado_Andrei_Angouw_%28cropped%29.jpg" alt="profile-image" class="" />
-        </div>
-        <div class="card-content">
-            <h2>Andrei Angouw</h2>
-            <h5>Wali Kota Manado</h5>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum laudantium numquam accusamus, suscipit omnis repellendus officiis itaque? Explicabo accusamus quo expedita eius, repellendus tempora voluptatibus fugit quia sapiente magni perferendis!</p>
-        </div>
-    </div>
-</div>
