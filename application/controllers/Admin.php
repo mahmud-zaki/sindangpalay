@@ -7,6 +7,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->helper('url');
     }
 
     public function index()
@@ -252,7 +253,7 @@ class Admin extends CI_Controller
 
     public function berkas_klr()
     {
-        $data['title'] = 'Sindang Palay | Berkas masuk';
+        $data['title'] = 'Sindang Palay | Berkas keluar';
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
 
@@ -267,7 +268,7 @@ class Admin extends CI_Controller
 
     public function berkas_dntr()
     {
-        $data['title'] = 'Sindang Palay | Berkas masuk';
+        $data['title'] = 'Sindang Palay | Berkas diantar';
         $data['user'] = $this->db->get_where('user', ['username' =>
         $this->session->userdata('username')])->row_array();
 
@@ -409,5 +410,49 @@ class Admin extends CI_Controller
                 Postingan berhasil dihapus!
             </div>');
         redirect('admin/post_');
+    }
+
+    function download($id)
+    {
+        $this->load->helper('download');
+        $data = $this->db->get_where('berkas_masuk', ['id_berkas' => $id])->row();
+        force_download('assets/document/' . $data->berkas, NULL);
+    }
+
+    public function brks_klr()
+    {
+        $brks_klr = [
+            'id_berkas' => $this->input->post('id_berkas'),
+            'nama_berkas' => $this->input->post('nama_berkas'),
+            'nama' => $this->input->post('nama'),
+            'berkas' => $this->input->post('berkas'),
+            'alamat' => $this->input->post('alamat'),
+            'no_tlp' => $this->input->post('no_tlp'),
+            'is_read' => 0,
+            'tggl_brks' => date("Y-m-d")
+        ];
+        $this->db->insert('berkas_keluar', $brks_klr);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        Berkas berhasil ditarik !
+        </div>');
+        redirect('admin/berkas_klr');
+    }
+
+    public function brks_dntr()
+    {
+        $brks_dntr = [
+            'id_berkas' => $this->input->post('id_berkas'),
+            'nama_berkas' => $this->input->post('nama_berkas'),
+            'nama' => $this->input->post('nama'),
+            'alamat' => $this->input->post('alamat'),
+            'no_tlp' => $this->input->post('no_tlp'),
+            'is_read' => 0,
+            'tggl_brks' => date("Y-m-d")
+        ];
+        $this->db->insert('berkas_diantar', $brks_dntr);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        Berkas berhasil diantar !
+        </div>');
+        redirect('admin/berkas_dntr');
     }
 }

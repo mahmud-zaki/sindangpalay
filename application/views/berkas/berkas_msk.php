@@ -48,19 +48,21 @@
                                             <?php $i = 1; ?>
                                             <?php foreach ($berkas as $b) : ?>
                                                 <tr>
-                                                    <td><?= $i; ?></td>
-                                                    <td><?= $b['id_berkas']; ?></td>
-                                                    <td><?= $b['nama_berkas']; ?></td>
-                                                    <td><?= $b['nama']; ?></td>
-                                                    <td><?= $b['alamat']; ?></td>
-                                                    <td><?= $b['no_tlp']; ?></td>
-                                                    <td><?= $b['berkas']; ?></td>
-                                                    <td><?= $b['tggl_brks']; ?></td>
-
-                                                    <td align="start">
-                                                        <a href="<?= base_url('menu/edit_menu/') . $b['id']; ?>" class="badge badge-success">edit</a>
-                                                        <a href="<?= base_url('menu/hapus_menu/') . $b['id']; ?>" class="badge badge-danger">delete</a>
-                                                    </td>
+                                                    <form action="<?= base_url('admin/brks_klr'); ?>" method="POST">
+                                                        <td><?= $i; ?></td>
+                                                        <td><input type="text" name="id_berkas" id="id_berkas" value="<?= $b['id_berkas']; ?>" hidden><?= $b['id_berkas']; ?></td>
+                                                        <td><input type="text" name="nama_berkas" id="nama_berkas" value="<?= $b['nama_berkas']; ?>" hidden><?= $b['nama_berkas']; ?></td>
+                                                        <td><input type="text" name="nama" id="nama" value="<?= $b['nama']; ?>" hidden><?= $b['nama']; ?></td>
+                                                        <td><input type="text" name="alamat" id="alamat" value="<?= $b['alamat']; ?>" hidden><?= $b['alamat']; ?></td>
+                                                        <td><input type="text" name="no_tlp" id="no_tlp" value="<?= $b['no_tlp']; ?>" hidden><?= $b['no_tlp']; ?></td>
+                                                        <td><input type="text" name="berkas" id="berkas" value="<?= $b['berkas']; ?>" hidden><?= $b['berkas']; ?></td>
+                                                        <td><?= $b['tggl_brks']; ?></td>
+                                                        <td align=" start">
+                                                            <button type="submit" class="badge badge-primary">Tarik berkas</button>
+                                                            <a href="<?= base_url('admin/edit_admin/') . $b['id']; ?>" class="badge badge-success">edit</a>
+                                                            <a href="<?= base_url('admin/hapus_menu/') . $b['id']; ?>" class="badge badge-danger">delete</a>
+                                                        </td>
+                                                    </form>
                                                 </tr>
                                                 <?php $i++; ?>
                                             <?php endforeach; ?>

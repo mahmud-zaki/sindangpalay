@@ -12,8 +12,8 @@
                         <div class="card-body ">
                             <h6 class="card-title text-uppercase"><?= $po['judul']; ?></h6>
                             <p class="content"><?= $po['deskripsi']; ?></p>
-                            <button onclick="readMore(this)">Read More</button>
-                            <small class="card-text float-left text-muted"><?= format_indo(date($po['tggl_post']), "Y-m"); ?></small>
+                            <a href="<?= base_url('user/isi_blog/') . $po['id']; ?>" class="btn btn-sm btn-primary">Baca lebih lanjut</a>
+                            <small class="card-text text-muted row pt-2 m-l-3" style="margin-left: 0;"><?= format_indo(date($po['tggl_post']), "Y-m"); ?></small>
                         </div>
                     </div>
                 </div>

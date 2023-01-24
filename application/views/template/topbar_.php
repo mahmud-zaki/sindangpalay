@@ -7,19 +7,19 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class=" mynav collapse navbar-collapse" style="flex-grow: 0;" id="navbarNav">
+            <div class="collapse navbar-collapse" style="flex-grow: 0;" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" style="color: black;" href="<?= base_url('user'); ?>">Beranda</a>
+                        <a class="nav-link mx-2" href="<?= base_url('user'); ?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" style="color: black;" href="<?= base_url('user/layanan'); ?>">Layanan</a>
+                        <a class="nav-link mx-2" href="<?= base_url('user/layanan'); ?>">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" style="color: black;" href="<?= base_url('user/kontak'); ?>">Kontak</a>
+                        <a class="nav-link mx-2" href="<?= base_url('user/kontak'); ?>">Kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" style="color: black;" href="<?= base_url('user/blog'); ?>">Blog</a>
+                        <a class="nav-link mx-2" href="<?= base_url('user/blog'); ?>">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +31,7 @@
         (function() {
 
             const target = document.querySelector(".target");
-            const links = document.querySelectorAll(".mynav a");
+            const links = document.querySelectorAll(".mynav");
             const colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
 
             function mouseenterFunc() {

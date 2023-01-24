@@ -14,12 +14,12 @@
                                     <div class="col-lg-12" id="flashdata">
                                         <?= $this->session->flashdata('message'); ?>
                                     </div>
-                                    <?= form_open_multipart('user/ket_usaha'); ?>
+                                    <?= form_open_multipart('user/ket_kematian'); ?>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Pengurusan berkas</label>
-                                                <input type="text" id="nama_berkas" name="nama_berkas" class="form-control" value="Surat Keterangan Usaha" readonly>
+                                                <input type="text" id="nama_berkas" name="nama_berkas" class="form-control" value="Surat Keterangan Kematian" readonly>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Nama lengkap pemohon</label>
@@ -54,23 +54,20 @@
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="flush-heading1">
                                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
-                                                            Syarat Pembuatan Surat Keterangan Usaha
+                                                            Syarat Pembuatan Surat Keterangan Kematian
                                                         </button>
                                                     </h2>
                                                     <div id="flush-collapse1" class="accordion-collapse collapse show" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
                                                         <div class="accordion-body">
                                                             <h5>Berikut Berkas Yang Harus Diunggah Dalam Satu File PDF</h5>
                                                             <ul style="list-style-type:square">
-                                                                <li>KTP (kartu tanda penduduk) baik asli maupun fotokopi</li>
-                                                                <li>KK (kartu keluarga) asli dan fotokopi</li>
-                                                                <li>Formulir pendukung</li>
-                                                                <li>Surat pengantar dari RT/RW setempat</li><br>
-                                                                <p>Selain itu, Pelaku usaha juga perlu menyiapkan:</p>
-                                                                <li>Foto lokasi usaha</li>
-                                                                <li>Pernjanjian sewa tanah/bangunan</li>
-                                                                <li>Surat pernyataan tidak keberatan</li>
-                                                                <li>KTP pemilik tanah/bangunan</li>
-                                                                <li>Surat pernyataan yang menyatakan tidak akan berjualan di trotoar dan badan jalan, serta tidak mengganggu kegiatan umum</li>
+                                                                <li>Surat Pengantar RT diketahui RW</li>
+                                                                <li>Formulir (Tersedia di Kelurahan)</li>
+                                                                <li>KTP Asli Yang Meninggal</li>
+                                                                <li>KK Dimana Yang Meninggal Terdaftar</li>
+                                                                <li>Surat Keterangan Kematian dari Dokter/Rumah Sakit/Kepolisian</li>
+                                                                <li>Fotocopy KTP Elektronik Pelapor/Pemohon</li>
+                                                                <li>Surat Tanda Melapor diri (STMD) dari Kepolisian Bagi Warga Negara Asing (WNA)</li>
                                                             </ul>
                                                         </div>
                                                     </div>

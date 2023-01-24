@@ -70,6 +70,7 @@
                         <li>KTP serta Kartu Keluarga dalam bentuk asli dan fotokopi</li>
                         <li>Surat kuasa dengan materai Rp10.000 jika pengurusan Surat Keterangan Domisili diwakilkan</li>
                     </ul>
+                    <a href="<?= base_url('user/ket_domisili'); ?>" class="btn btn-primary btn-sm ">Buat Surat Keterangan Domisili</a>
                 </div>
             </div>
         </div>
@@ -91,6 +92,7 @@
                         <li>Fotocopy KTP Elektronik Pelapor/Pemohon</li>
                         <li>Surat Tanda Melapor diri (STMD) dari Kepolisian Bagi Warga Negara Asing (WNA)</li>
                     </ul>
+                    <a href="<?= base_url('user/ket_kematian'); ?>" class="btn btn-primary btn-sm ">Buat Surat Keterangan Kematian</a>
                 </div>
             </div>
         </div>
@@ -111,6 +113,7 @@
                         <li>Akte Perceraian untuk Cerai Hidup</li>
                         <li>Akte Kematian untuk Cerai Mati</li>
                     </ul>
+                    <a href="<?= base_url('user/ket_kawin'); ?>" class="btn btn-primary btn-sm ">Buat Surat Keterangan Status Perkawinan</a>
                 </div>
             </div>
         </div>
@@ -129,6 +132,7 @@
                         <li>Kartu Keluarga (KK) asli dan fotokopi</li>
                         <li>KTP asli dan fotokopi</li>
                     </ul>
+                    <a href="<?= base_url('user/ket_pindah'); ?>" class="btn btn-primary btn-sm ">Buat Surat Keterangan Pindah Domisili</a>
                 </div>
             </div>
         </div>

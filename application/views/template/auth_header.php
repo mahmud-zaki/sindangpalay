@@ -9,6 +9,8 @@
     <title><?= $title; ?></title>
 
     <!-- ================= Favicon ================== -->
+    <!-- Icon sindangpalay -->
+    <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/icon_kel.ico'); ?>" />
     <!-- Standard -->
     <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
     <!-- Retina iPad Touch Icon-->

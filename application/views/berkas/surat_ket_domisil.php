@@ -14,12 +14,12 @@
                                     <div class="col-lg-12" id="flashdata">
                                         <?= $this->session->flashdata('message'); ?>
                                     </div>
-                                    <?= form_open_multipart('user/ket_usaha'); ?>
+                                    <?= form_open_multipart('user/ket_domisili'); ?>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Pengurusan berkas</label>
-                                                <input type="text" id="nama_berkas" name="nama_berkas" class="form-control" value="Surat Keterangan Usaha" readonly>
+                                                <input type="text" id="nama_berkas" name="nama_berkas" class="form-control" value="Surat Keterangan Domisili" readonly>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Nama lengkap pemohon</label>
@@ -61,16 +61,9 @@
                                                         <div class="accordion-body">
                                                             <h5>Berikut Berkas Yang Harus Diunggah Dalam Satu File PDF</h5>
                                                             <ul style="list-style-type:square">
-                                                                <li>KTP (kartu tanda penduduk) baik asli maupun fotokopi</li>
-                                                                <li>KK (kartu keluarga) asli dan fotokopi</li>
-                                                                <li>Formulir pendukung</li>
-                                                                <li>Surat pengantar dari RT/RW setempat</li><br>
-                                                                <p>Selain itu, Pelaku usaha juga perlu menyiapkan:</p>
-                                                                <li>Foto lokasi usaha</li>
-                                                                <li>Pernjanjian sewa tanah/bangunan</li>
-                                                                <li>Surat pernyataan tidak keberatan</li>
-                                                                <li>KTP pemilik tanah/bangunan</li>
-                                                                <li>Surat pernyataan yang menyatakan tidak akan berjualan di trotoar dan badan jalan, serta tidak mengganggu kegiatan umum</li>
+                                                                <li>Surat pengantar dari Ketua RT dan RW</li>
+                                                                <li>KTP serta Kartu Keluarga dalam bentuk asli dan fotokopi</li>
+                                                                <li>Surat kuasa dengan materai Rp10.000 jika pengurusan Surat Keterangan Domisili diwakilkan</li>
                                                             </ul>
                                                         </div>
                                                     </div>
